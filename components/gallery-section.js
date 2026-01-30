@@ -1,0 +1,58 @@
+export function GallerySection() {
+  return (
+    <section id="galeria" className="py-24 px-6 bg-[#243b47]">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <p className="text-primary text-sm tracking-[0.3em] uppercase mb-4">Imágenes</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 text-balance">Descubre Nuestro Paraíso</h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Large Featured Image */}
+          <div className="md:row-span-2 relative overflow-hidden rounded-lg group">
+            <img
+              src="/images/lago-espejo.jpeg"
+              alt="Vista principal del Lago Espejo"
+              className="w-full h-full object-cover min-h-[400px] md:min-h-[600px] group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f3a]/80 to-transparent flex items-end p-8">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">Vista Principal</h3>
+                <p className="text-white/80">Lago Espejo y las montañas</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Placeholder Images */}
+          <div className="relative overflow-hidden rounded-lg group">
+            <img
+              src="/cozy-cabin-interior-with-fireplace-and-mountain-vi.jpg"
+              alt="Interior de la cabaña"
+              className="w-full h-[280px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f3a]/80 to-transparent flex items-end p-6">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-1">Interior Acogedor</h3>
+                <p className="text-white/80 text-sm">Confort y calidez</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative overflow-hidden rounded-lg group">
+            <img
+              src="/wooden-dock-on-mountain-lake-at-sunset.jpg"
+              alt="Muelle privado"
+              className="w-full h-[280px] object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f3a]/80 to-transparent flex items-end p-6">
+              <div>
+                <h3 className="text-xl font-bold text-white mb-1">Muelle Privado</h3>
+                <p className="text-white/80 text-sm">Acceso directo al lago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
