@@ -11,8 +11,8 @@ export function GallerySection() {
           {/* Large Featured Image */}
           <div className="md:row-span-2 relative overflow-hidden rounded-lg group">
             <img
-              src="/images/lago-espejo.jpeg"
-              alt="Vista principal del Lago Espejo"
+              src="/images/manzanoLake.jpg"
+              alt="Vista principal del Lago Manzano"
               className="w-full h-full object-cover min-h-[400px] md:min-h-[600px] group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f3a]/80 to-transparent flex items-end p-8">
@@ -26,13 +26,13 @@ export function GallerySection() {
           {/* Placeholder Images */}
           <div className="relative overflow-hidden rounded-lg group">
             <img
-              src="/cozy-cabin-interior-with-fireplace-and-mountain-vi.jpg"
+              src="/images/araucaria.jpeg"
               alt="Interior de la cabaña"
               className="w-full h-[280px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f3a]/80 to-transparent flex items-end p-6">
               <div>
-                <h3 className="text-xl font-bold text-white mb-1">Interior Acogedor</h3>
+                <h3 className="text-xl font-bold text-white mb-1">Araucaria</h3>
                 <p className="text-white/80 text-sm">Confort y calidez</p>
               </div>
             </div>
@@ -40,14 +40,14 @@ export function GallerySection() {
 
           <div className="relative overflow-hidden rounded-lg group">
             <img
-              src="/wooden-dock-on-mountain-lake-at-sunset.jpg"
+              src="/images/arrayan.jpeg"
               alt="Muelle privado"
               className="w-full h-[280px] object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f3a]/80 to-transparent flex items-end p-6">
               <div>
-                <h3 className="text-xl font-bold text-white mb-1">Muelle Privado</h3>
-                <p className="text-white/80 text-sm">Acceso directo al lago</p>
+                <h3 className="text-xl font-bold text-white mb-1">Arrayán</h3>
+                <p className="text-white/80 text-sm">Vista al bosque</p>
               </div>
             </div>
           </div>

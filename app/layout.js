@@ -6,8 +6,8 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Cabañas Lago Espejo - Alquiler de Cabañas",
-  description: "Alquiler de cabañas en un entorno natural único. Disfruta de la tranquilidad del lago y las montañas.",
+  title: "Apart Hotel Manzano - Alquiler de Cabañas",
+  description: "Alquiler de cabañas en un entorno natural único. Disfruta de la tranquilidad del bosque y las montañas. A 3 cuadras del lago Nahuel Huapi",
   generator: "v0.app",
   icons: {
     icon: [

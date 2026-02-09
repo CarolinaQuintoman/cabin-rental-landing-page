@@ -13,9 +13,9 @@ export function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contacto</h4>
             <div className="space-y-2 text-white/60">
-              <p>Email: info@aruyen.com</p>
-              <p>Tel: +54 9 11 1234-5678</p>
-              <p>Ubicación: Villa La Angostura, Neuquén, Patagonia, Argentina</p>
+              <p>Email: apartaruyen@gmail.com</p>
+              <p>Tel: +54 9 294 4969132</p>
+              <p>Ubicación: Los Castaños 198, Villa La Angostura, Neuquén, Patagonia, Argentina</p>
             </div>
           </div>
 

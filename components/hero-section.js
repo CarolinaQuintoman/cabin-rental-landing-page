@@ -11,7 +11,12 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <img src="/images/lago-espejo.jpeg" alt="Lago Espejo" className="w-full h-full object-cover" />
+        <img 
+          src="/images/manzanoLake.jpg" 
+          alt="Lago Manzano" 
+          className="w-full h-full object-cover object-center"
+          style={{objectPosition: '100% 30%'}} // 50% horizontal, 30% vertical
+        />
         <div className="absolute inset-0 bg-[#1a2f3a]/75" />
       </div>
 
