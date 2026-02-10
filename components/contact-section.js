@@ -32,23 +32,41 @@ export function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus(null)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitStatus("success")
-      setFormData({
-        nombre: "",
-        email: "",
-        telefono: "",
-        fechaLlegada: "",
-        fechaSalida: "",
-        huespedes: "",
-        mensaje: "",
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
 
+      const result = await response.json()
+
+      if (response.ok) {
+        setSubmitStatus("success")
+        setFormData({
+          nombre: "",
+          email: "",
+          telefono: "",
+          fechaLlegada: "",
+          fechaSalida: "",
+          huespedes: "",
+          mensaje: "",
+        })
+      } else {
+        setSubmitStatus("error")
+        console.error('Error:', result.error)
+      }
+    } catch (error) {
+      setSubmitStatus("error")
+      console.error('Error enviando formulario:', error)
+    } finally {
+      setIsSubmitting(false)
       setTimeout(() => setSubmitStatus(null), 5000)
-    }, 1500)
+    }
   }
 
   return (
@@ -182,8 +200,14 @@ export function ContactSection() {
             </div>
 
             {submitStatus === "success" && (
-              <div className="bg-primary/20 border border-primary text-white p-4 rounded-lg">
-                ¡Gracias por tu consulta! Nos pondremos en contacto contigo pronto.
+              <div className="bg-green-600/20 border border-green-500 text-green-100 p-4 rounded-lg">
+                ✅ ¡Perfecto! Tu consulta ha sido enviada. Recibirás un email de confirmación y nos contactaremos contigo pronto.
+              </div>
+            )}
+
+            {submitStatus === "error" && (
+              <div className="bg-red-600/20 border border-red-500 text-red-100 p-4 rounded-lg">
+                ❌ Hubo un error al enviar tu consulta. Por favor, intenta nuevamente o contáctanos directamente.
               </div>
             )}
 
