@@ -5,7 +5,7 @@ export function FeaturesSection() {
     {
       title: "Ubicación Privilegiada",
       description:
-        "Situada a orillas del lago con vistas panorámicas a las montañas. Acceso directo al muelle privado y senderos naturales.",
+        "Situada a 3 cuadras del lago Nahuel Huapi con vistas panorámicas a las montañas.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -75,7 +75,7 @@ export function FeaturesSection() {
             Te Espera
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            Nuestra cabaña ofrece el equilibrio perfecto entre comodidad moderna y naturaleza salvaje.
+            Nuestra cabaña ofrece el equilibrio perfecto entre comodidad moderna y naturaleza.
           </p>
         </div>
 
