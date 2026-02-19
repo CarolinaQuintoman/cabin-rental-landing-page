@@ -17,8 +17,8 @@ export function GallerySection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a2f3a]/80 to-transparent flex items-end p-8">
               <div>
-                <h3 className="text-2xl font-bold text-white mb-2">Vista Principal</h3>
-                <p className="text-white/80">Lago Espejo y las montañas</p>
+                <h3 className="text-2xl font-bold text-white mb-2">Vista de Manzano</h3>
+                <p className="text-white/80">Lago Nahuel Huapi y las montañas</p>
               </div>
             </div>
           </div>

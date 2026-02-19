@@ -6,7 +6,7 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-bold text-white mb-4">ARUYEN</h3>
             <p className="text-white/60 leading-relaxed">
-              Tu escape perfecto en medio de la naturaleza. Alquiler Apart Hotel.
+              Tu escape perfecto en medio de la naturaleza. Alquiler de departamentos.
             </p>
           </div>
 

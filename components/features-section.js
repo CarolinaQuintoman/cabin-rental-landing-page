@@ -21,7 +21,7 @@ export function FeaturesSection() {
     {
       title: "Comodidades Modernas",
       description:
-        "Equipada con cocina completa, calefacción, WiFi, y todos los servicios necesarios para una estadía confortable.",
+        "Equipada con cocina, calefacción, WiFi, y todos los servicios necesarios para una estadía confortable.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -34,8 +34,8 @@ export function FeaturesSection() {
       ),
     },
     {
-      title: "Actividades Al Aire Libre",
-      description: "Kayak, pesca, trekking, observación de aves. Múltiples opciones para conectar con la naturaleza.",
+      title: "Actividades Al Aire Libre en Villa La Angostura",
+      description: "Kayak, pesca, trekking, observación de aves. Múltiples opciones para conectar con la naturaleza. Podes contactarte con la direccion de Turismo de la ciudad.",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
