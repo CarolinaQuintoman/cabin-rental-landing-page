@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Email del propietario (tu cliente)
-const OWNER_EMAIL = process.env.OWNER_EMAIL || 'apartaruyen@gmail.com';
+const OWNER_EMAIL = process.env.OWNER_EMAIL || 'caroquintoman@gmail.com';
 
 export async function POST(request) {
   try {
@@ -24,7 +24,7 @@ export async function POST(request) {
     const emailToOwner = await resend.emails.send({
       from: 'noreply@aruyenaparthotel.com',
       to: OWNER_EMAIL,
-      subject: `🏠 Nueva consulta de reserva - ${nombre}`,
+      subject: `Nueva consulta de reserva - ${nombre}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -34,41 +34,41 @@ export async function POST(request) {
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #1a2f3a 0%, #2d4a57 100%); color: white; padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
-            <h1 style="margin: 0; font-size: 28px;">🏠 ARUYEN Apart Hotel</h1>
+            <h1 style="margin: 0; font-size: 28px;">ARUYEN Apart Hotel</h1>
             <p style="margin: 10px 0 0; font-size: 16px; opacity: 0.9;">Nueva Consulta de Reserva</p>
           </div>
           
           <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
             <h2 style="color: #1a2f3a; margin-bottom: 20px; border-bottom: 2px solid #1a2f3a; padding-bottom: 10px;">
-              📋 Datos del Cliente
+              Datos del Cliente
             </h2>
             
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a; width: 40%;">👤 Nombre:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a; width: 40%;">Nombre:</td>
                 <td style="padding: 8px 0;">${nombre}</td>
               </tr>
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;">📧 Email:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;"> Email:</td>
                 <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #0066cc; text-decoration: none;">${email}</a></td>
               </tr>
               ${telefono ? `
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;">📱 Teléfono:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;"> Teléfono:</td>
                 <td style="padding: 8px 0;"><a href="tel:${telefono}" style="color: #0066cc; text-decoration: none;">${telefono}</a></td>
               </tr>
               ` : ''}
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;">📅 Check-in:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;"> Check-in:</td>
                 <td style="padding: 8px 0;">${new Date(fechaLlegada).toLocaleDateString('es-AR')}</td>
               </tr>
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;">📅 Check-out:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;"> Check-out:</td>
                 <td style="padding: 8px 0;">${new Date(fechaSalida).toLocaleDateString('es-AR')}</td>
               </tr>
               ${huespedes ? `
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;">👥 Huéspedes:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;">Huéspedes:</td>
                 <td style="padding: 8px 0;">${huespedes} personas</td>
               </tr>
               ` : ''}
@@ -77,20 +77,12 @@ export async function POST(request) {
 
           ${mensaje ? `
           <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-            <h3 style="color: #856404; margin-top: 0;">💬 Mensaje del Cliente:</h3>
+            <h3 style="color: #856404; margin-top: 0;"> Mensaje del Cliente:</h3>
             <p style="margin: 0; color: #856404; font-style: italic;">"${mensaje}"</p>
           </div>
           ` : ''}
 
-          <div style="background: #d4edda; border: 1px solid #c3e6cb; padding: 20px; border-radius: 10px; text-align: center;">
-            <p style="margin: 0; color: #155724; font-weight: bold;">
-              ⚡ Responde rápidamente para asegurar la reserva
-            </p>
-            <p style="margin: 5px 0 0; color: #155724; font-size: 14px;">
-              Contacta al cliente lo antes posible para confirmar disponibilidad y precio.
-            </p>
-          </div>
-
+          
           <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 12px;">
             <p>Este email fue generado automáticamente desde tu sitio web ARUYEN Apart Hotel</p>
           </div>
@@ -116,7 +108,7 @@ export async function POST(request) {
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="background: linear-gradient(135deg, #1a2f3a 0%, #2d4a57 100%); color: white; padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
-            <h1 style="margin: 0; font-size: 28px;">🏠 ARUYEN Apart Hotel</h1>
+            <h1 style="margin: 0; font-size: 28px;"> ARUYEN Apart Hotel</h1>
             <p style="margin: 10px 0 0; font-size: 16px; opacity: 0.9;">Villa La Angostura</p>
           </div>
           
@@ -127,17 +119,17 @@ export async function POST(request) {
             </p>
             
             <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
-              <h3 style="color: #1a2f3a; margin-top: 0;">📋 Resumen de tu consulta:</h3>
+              <h3 style="color: #1a2f3a; margin-top: 0;"> Resumen de tu consulta:</h3>
               <ul style="list-style: none; padding: 0;">
-                <li style="padding: 5px 0;"><strong>📅 Llegada:</strong> ${new Date(fechaLlegada).toLocaleDateString('es-AR')}</li>
-                <li style="padding: 5px 0;"><strong>📅 Salida:</strong> ${new Date(fechaSalida).toLocaleDateString('es-AR')}</li>
-                ${huespedes ? `<li style="padding: 5px 0;"><strong>👥 Huéspedes:</strong> ${huespedes} personas</li>` : ''}
+                <li style="padding: 5px 0;"><strong> Llegada:</strong> ${new Date(fechaLlegada).toLocaleDateString('es-AR')}</li>
+                <li style="padding: 5px 0;"><strong> Salida:</strong> ${new Date(fechaSalida).toLocaleDateString('es-AR')}</li>
+                ${huespedes ? `<li style="padding: 5px 0;"><strong>Huéspedes:</strong> ${huespedes} personas</li>` : ''}
               </ul>
             </div>
 
             <div style="background: #d4edda; border: 1px solid #c3e6cb; padding: 20px; border-radius: 10px; margin: 20px 0;">
               <p style="margin: 0; color: #155724; text-align: center;">
-                <strong>⏰ Te contactaremos dentro de las próximas 24 horas</strong>
+                <strong> Te contactaremos dentro de las próximas 24 horas</strong>
               </p>
             </div>
 
