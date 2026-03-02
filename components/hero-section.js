@@ -48,7 +48,7 @@ export function HeroSection() {
           Apart Hotel
         </h1>
         <p className="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Alquila con nosotros y disfruta de vistas espectaculares, naturaleza y momentos inolvidables en un
+          Alquila con nosotros y disfruta de la naturaleza y momentos inolvidables en un
           entorno único.
         </p>
         <Button

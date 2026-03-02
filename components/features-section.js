@@ -75,7 +75,7 @@ export function FeaturesSection() {
             Te Espera
           </h2>
           <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed">
-            Nuestra cabaña ofrece el equilibrio perfecto entre comodidad moderna y naturaleza.
+            Nuestros departamentos ofrecen el equilibrio perfecto entre comodidad moderna y naturaleza.
           </p>
         </div>
 

@@ -23,7 +23,7 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-4">Horario</h4>
             <div className="space-y-2 text-white/60">
               <p>Check-in: 15:00 hs</p>
-              <p>Check-out: 11:00 hs</p>
+              <p>Check-out: 10:00 hs</p>
               <p>Consultas: 9:00 - 20:00 hs</p>
             </div>
           </div>
