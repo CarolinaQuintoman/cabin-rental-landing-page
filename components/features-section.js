@@ -35,7 +35,7 @@ export function FeaturesSection() {
     },
     {
       title: "Actividades Al Aire Libre en Villa La Angostura",
-      description: "Kayak, pesca, trekking, observación de aves. Múltiples opciones para conectar con la naturaleza. Podes contactarte con la direccion de Turismo de la ciudad.",
+      description: "Kayak, pesca, trekking, observación de aves. Múltiples opciones para conectar con la naturaleza. Podes contactarte con la direccion de Turismo de la ciudad. www.villalaangosturaturismo.gob.ar",
       icon: (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
