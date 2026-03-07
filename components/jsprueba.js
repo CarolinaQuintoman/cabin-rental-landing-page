@@ -1,0 +1,45 @@
+ const previewImages = [
+    { src: "/araucaria/arrayan14.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan16.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan18.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan17.jpeg", alt: "Depto Araucaria" },
+  ]
+
+  const allImages = [
+    // Departamento Araucaria
+    { src: "/araucaria/arrayan14.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan16.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan17.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan18.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan19.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan20.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan21.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan22.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan23.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan24.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan25.jpeg", alt: "Depto Araucaria" },
+    { src: "/araucaria/arrayan26.jpeg", alt: "Depto Araucaria" },
+    
+    // Departamento Arrayán
+    { src: "/arrayan/arrayan1.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan2.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan12.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan13.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan14.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan15.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan16.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan17.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan18.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan19.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan21.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan22.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan23.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan24.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan25.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan26.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan27.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan28.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan29.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan30.jpeg", alt: "Depto Arrayan" },
+    { src: "/arrayan/arrayan31.jpeg", alt: "Depto Arrayan" },
+  ]
