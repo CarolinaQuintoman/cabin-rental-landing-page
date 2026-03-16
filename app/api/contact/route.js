@@ -7,16 +7,72 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Email del propietario (tu cliente)
 const OWNER_EMAIL = process.env.OWNER_EMAIL || 'caroquintoman@gmail.com';
 
+// Función para verificar reCAPTCHA
+async function verifyRecaptcha(token) {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secretKey) {
+    throw new Error('reCAPTCHA secret key not configured');
+  }
+
+  const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `secret=${secretKey}&response=${token}`,
+  });
+
+  const result = await response.json();
+  return result;
+}
+
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { nombre, email, telefono, fechaLlegada, fechaSalida, huespedes, mensaje } = body;
+    const { nombre, email, telefono, fechaLlegada, fechaSalida, huespedes, mensaje, recaptchaToken } = body;
 
     // Validar campos requeridos
     if (!nombre || !email || !fechaLlegada || !fechaSalida) {
       return NextResponse.json(
         { error: 'Faltan campos requeridos' },
         { status: 400 }
+      );
+    }
+
+    // Verificar reCAPTCHA
+    if (!recaptchaToken) {
+      return NextResponse.json(
+        { error: 'Token de verificación requerido' },
+        { status: 400 }
+      );
+    }
+
+    try {
+      const recaptchaResult = await verifyRecaptcha(recaptchaToken);
+      
+      if (!recaptchaResult.success) {
+        console.log('reCAPTCHA verification failed:', recaptchaResult['error-codes']);
+        return NextResponse.json(
+          { error: 'Verificación de seguridad fallida. Por favor, intenta nuevamente.' },
+          { status: 400 }
+        );
+      }
+
+      // Verificar el score (reCAPTCHA v3 devuelve un score entre 0.0 y 1.0)
+      if (recaptchaResult.score < 0.5) {
+        console.log('reCAPTCHA score too low:', recaptchaResult.score);
+        return NextResponse.json(
+          { error: 'Verificación de seguridad fallida. Por favor, intenta nuevamente.' },
+          { status: 400 }
+        );
+      }
+
+      console.log('reCAPTCHA verified successfully. Score:', recaptchaResult.score);
+    } catch (recaptchaError) {
+      console.error('Error verifying reCAPTCHA:', recaptchaError);
+      return NextResponse.json(
+        { error: 'Error en la verificación de seguridad. Por favor, intenta nuevamente.' },
+        { status: 500 }
       );
     }
 

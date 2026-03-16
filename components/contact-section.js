@@ -7,6 +7,10 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { useRecaptcha } from "@/hooks/use-recaptcha"
+
+// Configuración de reCAPTCHA (reemplaza con tu Site Key)
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
 
 export function ContactSection() {
   // Lista de dominios de email populares y confiables
@@ -45,6 +49,9 @@ export function ContactSection() {
   const [submitStatus, setSubmitStatus] = useState(null)
   const [errors, setErrors] = useState({})
   const [emailSuggestion, setEmailSuggestion] = useState('')
+
+  // Hook para reCAPTCHA
+  const { isLoaded: recaptchaLoaded, executeRecaptcha } = useRecaptcha(RECAPTCHA_SITE_KEY)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -223,6 +230,14 @@ export function ContactSection() {
     setIsSubmitting(true)
 
     try {
+      // Verificar que reCAPTCHA esté cargado
+      if (!recaptchaLoaded || !RECAPTCHA_SITE_KEY) {
+        throw new Error('Sistema de verificación no disponible')
+      }
+
+      // Ejecutar reCAPTCHA
+      const recaptchaToken = await executeRecaptcha('contact_form')
+      
       // Combinar nombre y apellido para el envío
       const nombreCompleto = `${formData.nombre.trim()} ${formData.apellido.trim()}`
       
@@ -235,7 +250,8 @@ export function ContactSection() {
       const dataToSend = {
         ...formData,
         nombre: nombreCompleto, // Enviar nombre completo
-        telefono: phoneNumber
+        telefono: phoneNumber,
+        recaptchaToken // Agregar token de reCAPTCHA
       }
       
       const response = await fetch('/api/contact', {
@@ -529,11 +545,34 @@ export function ContactSection() {
 
             <Button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-[#4a7c59] hover:bg-[#3d6a4a] text-white py-6 text-base rounded-full"
+              disabled={isSubmitting || !recaptchaLoaded || !RECAPTCHA_SITE_KEY}
+              className="w-full bg-[#4a7c59] hover:bg-[#3d6a4a] text-white py-6 text-base rounded-full disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? "Enviando..." : "Enviar Consulta"}
+              {isSubmitting ? "Enviando..." : !recaptchaLoaded ? "Cargando verificación..." : "Enviar Consulta"}
             </Button>
+
+            {/* Información de reCAPTCHA */}
+            <p className="text-xs text-[#3d3d3d]/60 text-center mt-3">
+              Este sitio está protegido por reCAPTCHA y se aplican la{" "}
+              <a 
+                href="https://policies.google.com/privacy" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#4a7c59] hover:underline"
+              >
+                Política de Privacidad
+              </a>{" "}
+              y los{" "}
+              <a 
+                href="https://policies.google.com/terms" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#4a7c59] hover:underline"
+              >
+                Términos de Servicio
+              </a>{" "}
+              de Google.
+            </p>
           </form>
         </Card>
       </div>
