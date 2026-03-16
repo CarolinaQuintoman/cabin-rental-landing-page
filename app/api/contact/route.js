@@ -89,42 +89,47 @@ export async function POST(request) {
           <title>Nueva Consulta de Reserva</title>
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #1a2f3a 0%, #2d4a57 100%); color: white; padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
-            <h1 style="margin: 0; font-size: 28px;">ARUYEN Apart Hotel</h1>
-            <p style="margin: 10px 0 0; font-size: 16px; opacity: 0.9;">Nueva Consulta de Reserva</p>
+                    
+          <!-- Logo ARUYEN separado debajo -->
+          <div style="text-align: center; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+              <!-- Usar imagen PNG del ícono en lugar de SVG -->
+              <img src="https://www.aruyenaparthotel.com/images/aruyen-icon.png" alt="ARUYEN" style="width: 32px; height: 32px;" />
+              <h2 style="margin: 0; font-size: 28px; color: #4a7c59; font-weight: bold; letter-spacing: 2px;">ARUYEN</h2>
+            </div>
           </div>
           
           <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-            <h2 style="color: #1a2f3a; margin-bottom: 20px; border-bottom: 2px solid #1a2f3a; padding-bottom: 10px;">
+            <h2 style="color: #4a7c59; margin-bottom: 20px; border-bottom: 2px solid #1a2f3a; padding-bottom: 10px;">
               Datos del Cliente
             </h2>
             
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a; width: 40%;">Nombre:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #4a7c59; width: 40%;">Nombre:</td>
                 <td style="padding: 8px 0;">${nombre}</td>
               </tr>
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;"> Email:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #4a7c59;"> Email:</td>
                 <td style="padding: 8px 0;"><a href="mailto:${email}" style="color: #0066cc; text-decoration: none;">${email}</a></td>
               </tr>
               ${telefono ? `
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;"> Teléfono:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #4a7c59;"> Teléfono:</td>
                 <td style="padding: 8px 0;"><a href="tel:${telefono}" style="color: #0066cc; text-decoration: none;">${telefono}</a></td>
               </tr>
               ` : ''}
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;"> Check-in:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #4a7c59;"> Check-in:</td>
                 <td style="padding: 8px 0;">${new Date(fechaLlegada).toLocaleDateString('es-AR')}</td>
               </tr>
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;"> Check-out:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #4a7c59;"> Check-out:</td>
                 <td style="padding: 8px 0;">${new Date(fechaSalida).toLocaleDateString('es-AR')}</td>
               </tr>
               ${huespedes ? `
               <tr>
-                <td style="padding: 8px 0; font-weight: bold; color: #1a2f3a;">Huéspedes:</td>
+                <td style="padding: 8px 0; font-weight: bold; color: #4a7c59;">Huéspedes:</td>
                 <td style="padding: 8px 0;">${huespedes} personas</td>
               </tr>
               ` : ''}
@@ -133,15 +138,13 @@ export async function POST(request) {
 
           ${mensaje ? `
           <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-            <h3 style="color: #856404; margin-top: 0;"> Mensaje del Cliente:</h3>
-            <p style="margin: 0; color: #856404; font-style: italic;">"${mensaje}"</p>
+            <h3 style="color: #4a7c59; margin-top: 0;"> Mensaje del Cliente:</h3>
+            <p style="margin: 0; color: #257b3f; font-style: italic;">"${mensaje}"</p>
           </div>
           ` : ''}
 
           
-          <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; color: #666; font-size: 12px;">
-            <p>Este email fue generado automáticamente desde tu sitio web ARUYEN Apart Hotel</p>
-          </div>
+          
         </body>
         </html>
       `,
@@ -163,19 +166,25 @@ export async function POST(request) {
           <title>Consulta Recibida</title>
         </head>
         <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="background: linear-gradient(135deg, #1a2f3a 0%, #2d4a57 100%); color: white; padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 20px;">
-            <h1 style="margin: 0; font-size: 28px;"> ARUYEN Apart Hotel</h1>
-            <p style="margin: 10px 0 0; font-size: 16px; opacity: 0.9;">Villa La Angostura</p>
+                    
+          <!-- Logo ARUYEN separado debajo -->
+          <div style="text-align: center; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+              <!-- Usar imagen PNG del ícono en lugar de SVG -->
+              <img src="https://www.aruyenaparthotel.com/images/aruyen-icon.png" alt="ARUYEN" style="width: 32px; height: 32px;" />
+              <h2 style="margin: 0; font-size: 28px; color: #4a7c59; font-weight: bold; letter-spacing: 2px;">ARUYEN</h2>
+            </div>
+            
           </div>
           
           <div style="padding: 20px 0;">
-            <h2 style="color: #1a2f3a;">¡Hola ${nombre}! 👋</h2>
+            <h2 style="color: #4a7c59;">¡Hola ${nombre}! 👋</h2>
             <p style="font-size: 16px; margin-bottom: 20px;">
               Gracias por tu interés en <strong>ARUYEN Apart Hotel</strong>. Hemos recibido tu consulta de reserva y nos pondremos en contacto contigo <strong>a la brevedad</strong> para confirmar la disponibilidad.
             </p>
             
             <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
-              <h3 style="color: #1a2f3a; margin-top: 0;"> Resumen de tu consulta:</h3>
+              <h3 style="color: #4a7c59; margin-top: 0;"> Resumen de tu consulta:</h3>
               <ul style="list-style: none; padding: 0;">
                 <li style="padding: 5px 0;"><strong> Llegada:</strong> ${new Date(fechaLlegada).toLocaleDateString('es-AR')}</li>
                 <li style="padding: 5px 0;"><strong> Salida:</strong> ${new Date(fechaSalida).toLocaleDateString('es-AR')}</li>
@@ -188,18 +197,13 @@ export async function POST(request) {
                 <strong> Te contactaremos dentro de las próximas 24 horas</strong>
               </p>
             </div>
-
-            <p>Mientras tanto, puedes seguirnos en nuestras redes sociales para ver más fotos y novedades de nuestras cabañas.</p>
-            
+ 
             <p style="font-size: 14px; color: #666; margin-top: 30px;">
-              Si tienes alguna pregunta urgente, no dudes en contactarnos directamente.
+              Si tienes alguna pregunta urgente, no dudes en contactarnos directamente. +54 9 294 4969132
             </p>
           </div>
 
-          <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
-            <p style="color: #1a2f3a; font-size: 18px; margin-bottom: 5px;"><strong>🏔️ ¡Te esperamos en Villa La Angostura! 🏔️</strong></p>
-            <p style="color: #666; font-size: 14px;">ARUYEN Apart Hotel - Donde la naturaleza se encuentra con el confort</p>
-          </div>
+          
         </body>
         </html>
       `,
