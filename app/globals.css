@@ -123,3 +123,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Ocultar el badge de reCAPTCHA v3 */
+/* Google permite ocultar el badge si se incluyen los términos de uso en el formulario */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}

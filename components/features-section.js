@@ -4,7 +4,20 @@ export function FeaturesSection() {
   const features = [
     {
       title: "Ubicación Privilegiada",
-      description: "Situadas a 3 cuadras del lago Nahuel Huapi.",
+      description: (
+        <>
+          Situadas a 3 cuadras del lago <br /> Nahuel Huapi.{" "}
+          <a 
+            href="https://maps.google.com/maps?q=Los+casta%C3%B1os+198,+Villa+La+Angostura,+Neuqu%C3%A9n,+Argentina" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[#4a7c59] hover:text-[#3d6a4a] underline hover:no-underline transition-colors font-medium"
+          >
+            <br />
+            Ver en el mapa
+          </a>
+        </>
+      ),
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
@@ -33,7 +46,19 @@ export function FeaturesSection() {
     },
     {
       title: "Actividades",
-      description: "Múltiples opciones para conectar con la naturaleza. Consultar con la dirección de Turismo de la ciudad. www.villalaangosturaturismo.gob.ar",
+      description: (
+        <>
+          Múltiples opciones para conectar con la naturaleza. Consultar con la dirección de Turismo de la ciudad.{" "}
+          <a 
+            href="https://www.villalaangosturaturismo.gob.ar" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[#4a7c59] hover:text-[#3d6a4a] underline hover:no-underline transition-colors"
+          >
+            www.villalaangosturaturismo.gob.ar
+          </a>
+        </>
+      ),
       icon: (
         <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
