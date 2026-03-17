@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Email del propietario (tu cliente)
-const OWNER_EMAIL = process.env.OWNER_EMAIL || 'caroquintoman@gmail.com';
+const OWNER_EMAIL = process.env.OWNER_EMAIL || 'apartaruyen@gmail.com';
 
 // Función para verificar reCAPTCHA
 async function verifyRecaptcha(token) {
