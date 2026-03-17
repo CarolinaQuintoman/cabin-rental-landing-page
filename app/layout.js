@@ -6,25 +6,12 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Apart Hotel Manzano - Alquiler de departamentos turísticos en Villa La Angostura",
+  title: "ARUYEN Apart Hotel - Alquiler de departamentos turísticos en Villa La Angostura",
   description: "Alquiler de departamentos en un entorno natural único. Disfruta de la tranquilidad del bosque y las montañas. A 3 cuadras del lago Nahuel Huapi",
   generator: "Carolina Quintomán - Desarrolladora Web",
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/aruyenicon.svg",
-        type: "image/svg+xml",
-      },
-    ],
-    apple: "/apple-icon.png",
+    icon: "/images/aruyen-icon-white.svg",
+    apple: "/images/aruyen-icon-white.svg",
   },
 }
 

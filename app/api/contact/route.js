@@ -92,15 +92,21 @@ export async function POST(request) {
                     
           <!-- Logo ARUYEN separado debajo -->
           <div style="text-align: center; margin-bottom: 20px;">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-              <!-- Usar imagen PNG del ícono en lugar de SVG -->
-              <img src="https://www.aruyenaparthotel.com/images/aruyen-icon.png" alt="ARUYEN" style="width: 32px; height: 32px;" />
-              <h2 style="margin: 0; font-size: 28px; color: #4a7c59; font-weight: bold; letter-spacing: 2px;">ARUYEN</h2>
-            </div>
+            <table style="margin: 0 auto; border-collapse: collapse;">
+              <tr>
+                <td style="vertical-align: middle; text-align: right; padding-right: 15px;">
+                  <!-- Usar imagen PNG del ícono en lugar de SVG -->
+                  <img src="https://www.aruyenaparthotel.com/images/aruyen-icon.png" alt="ARUYEN" style="width: 32px; height: 32px; display: block; border: 0;" />
+                </td>
+                <td style="vertical-align: middle; text-align: left;">
+                  <h2 style="margin: 0; font-size: 28px; color: #4a7c59; font-weight: bold; letter-spacing: 2px;">ARUYEN</h2>
+                </td>
+              </tr>
+            </table>
           </div>
           
           <div style="background: #f8f9fa; padding: 25px; border-radius: 10px; margin-bottom: 20px;">
-            <h2 style="color: #4a7c59; margin-bottom: 20px; border-bottom: 2px solid #1a2f3a; padding-bottom: 10px;">
+            <h2 style="color: #4a7c59; margin-bottom: 20px; border-bottom: 2px solid #4a7c59; padding-bottom: 10px;">
               Datos del Cliente
             </h2>
             
@@ -137,7 +143,7 @@ export async function POST(request) {
           </div>
 
           ${mensaje ? `
-          <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+          <div style="background: #d4edda; border: 1px solid #c3e6cb; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
             <h3 style="color: #4a7c59; margin-top: 0;"> Mensaje del Cliente:</h3>
             <p style="margin: 0; color: #257b3f; font-style: italic;">"${mensaje}"</p>
           </div>
@@ -169,12 +175,18 @@ export async function POST(request) {
                     
           <!-- Logo ARUYEN separado debajo -->
           <div style="text-align: center; margin-bottom: 20px;">
-            <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-              <!-- Usar imagen PNG del ícono en lugar de SVG -->
-              <img src="https://www.aruyenaparthotel.com/images/aruyen-icon.png" alt="ARUYEN" style="width: 32px; height: 32px;" />
-              <h2 style="margin: 0; font-size: 28px; color: #4a7c59; font-weight: bold; letter-spacing: 2px;">ARUYEN</h2>
-            </div>
-            
+            <table style="margin: 0 auto; border-collapse: collapse;">
+              <tr>
+                <td style="vertical-align: middle; text-align: right; padding-right: 15px;">
+                  <!-- Usar imagen PNG del ícono en lugar de SVG -->
+                  <img src="https://www.aruyenaparthotel.com/images/aruyen-icon.png" alt="ARUYEN" style="width: 32px; height: 32px; display: block; border: 0;" />
+                </td>
+                <td style="vertical-align: middle; text-align: left;">
+                  <h2 style="margin: 0; font-size: 28px; color: #4a7c59; font-weight: bold; letter-spacing: 2px;">ARUYEN</h2>
+                  <p style="margin: 0; font-size: 14px; color: #666;">Apart Hotel en Villa La Angostura</p>
+                </td>
+              </tr>
+            </table>
           </div>
           
           <div style="padding: 20px 0;">
