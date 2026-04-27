@@ -80,6 +80,7 @@ export async function POST(request) {
     const emailToOwner = await resend.emails.send({
       from: 'noreply@aruyenaparthotel.com',
       to: OWNER_EMAIL,
+      replyTo: email,
       subject: `Nueva consulta de reserva - ${nombre}`,
       html: `
         <!DOCTYPE html>

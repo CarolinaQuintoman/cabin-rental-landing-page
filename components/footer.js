@@ -77,7 +77,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-[#e0ddd5] pt-8 text-center text-[#999] text-sm">
-          <p>&copy; {new Date().getFullYear()} Aruyen. Todos los derechos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} Aruyen. Todos los derechos reservados · Desarrollado por CQ</p>
         </div>
       </div>
     </footer>
