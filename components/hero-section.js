@@ -11,15 +11,14 @@ export function HeroSection() {
  
     <>
       {/* Navigation - Light Header */}
-      <nav className="bg-white px-6 py-4 flex items-center justify-between shadow-sm">
-        <div className="flex items-center gap-2">
-          <svg className="w-8 h-8 text-[#4a7c59]" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-          </svg>
-          <div>
-            <div className="text-xl font-bold text-[#4a7c59] tracking-wide">ARUYEN</div>
-            
-          </div>
+      <nav className="bg-white px-6 py-3 md:py-4 flex items-center justify-between shadow-sm">
+        <div className="flex items-center">
+          <img
+            src="/images/LogotipoAruyen.png"
+            alt="Aruyen Viole"
+            className="h-10 md:h-12 w-auto"
+          />
+          <span className="ml-4 text-xl font-bold text-[#4a7c59]">ARUYEN</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-[#3d3d3d]">
           <a href="#inicio" className="hover:text-[#4a7c59] transition-colors border-b-2 border-[#4a7c59] pb-1">

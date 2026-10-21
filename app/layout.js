@@ -10,8 +10,9 @@ export const metadata = {
   description: "Alquiler de departamentos en un entorno natural único. Disfruta de la tranquilidad del bosque y las montañas. A 3 cuadras del lago Nahuel Huapi",
   generator: "Carolina Quintomán - Desarrolladora Web",
   icons: {
-    icon: "/images/aruyen-icon-white.svg",
-    apple: "/images/aruyen-icon-white.svg",
+    icon: "/images/LogotipoAruyen.png",
+    shortcut: "/images/LogotipoAruyen.png",
+    apple: "/images/LogotipoAruyen.png",
   },
 }
 
